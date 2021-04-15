@@ -35,7 +35,7 @@
     }
     
     .separator {
-        border: 4px solid grey;
+        border: 4px solid #d4d3d3;
         display: block;
         margin: 20px 60px;
     }
@@ -296,6 +296,13 @@
         text-transform: uppercase;
     }
     
+    @media only screen and (max-width: 768px) {
+        .infoP>p:nth-child(2) {
+            font-size: 25.44pt !important;
+            text-transform: uppercase;
+        }
+    }
+    
     .infoP>p:nth-child(3) {
         font-size: 19.62pt !important;
     }
@@ -311,7 +318,7 @@
     
     .infoCont {
         color: #202d5e;
-        font-size: 20.38pt;
+        font-size: 17.38pt;
         font-weight: bold;
         margin-bottom: 9px;
         text-align: center;
