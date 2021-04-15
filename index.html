@@ -7,8 +7,454 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Css files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="normalize.css">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        /* .container-fluid {
+    margin: 0;
+    padding: 0;
+    } */
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        .pFont {
+            color: #202d5b;
+        }
+        
+        .logoimg>img {
+            width: 50%;
+            float: right;
+        }
+        
+        .imgCrew {
+            padding-left: 0;
+        }
+        
+        .imgCrew>img {
+            width: 75%;
+        }
+        
+        .row .content {
+            margin: auto;
+            font-weight: bold;
+        }
+        
+        .separator {
+            border: 4px solid #d4d3d3;
+            display: block;
+            margin: 20px 60px;
+        }
+        
+        .proImg>img {
+            width: 55%;
+        }
+        
+        .proP {
+            border-right: 11px solid #267467;
+            height: 164px;
+            margin: auto;
+        }
+        
+        .proP>p {
+            font-weight: bold;
+            color: #267467;
+            font-size: 28.82pt;
+            text-align: right;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+        
+        .proP>p:nth-child(2) {
+            font-size: 39.44pt !important;
+            text-transform: uppercase;
+            font-family: sans-serif;
+        }
+        
+        .proP>p:nth-child(3) {
+            font-size: 19.62pt !important;
+        }
+        
+        .bankImg {
+            padding: 0 0 0 16px;
+            margin: 4px 0px 4px 0px;
+        }
+        
+        .bankImg>img {
+            width: 100%;
+        }
+        
+        .bankP .arb {
+            direction: rtl;
+            color: #202d5e;
+            font-size: 12.38pt;
+            font-weight: bold;
+            text-align: right;
+            margin-bottom: 9px;
+        }
+        
+        .bankP .eng {
+            direction: ltr;
+            color: #202d5e;
+            font-size: 12.38pt;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        .strBackg {
+            background-color: #e2e2e2;
+            margin: 0;
+        }
+        
+        .strP {
+            border-left: 11px solid #267467;
+            height: 180px;
+            margin: auto;
+        }
+        
+        .strP>p {
+            font-weight: bold;
+            color: #267467;
+            font-size: 24.14pt;
+            text-align: left;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+        
+        .strP>p:nth-child(2) {
+            font-size: 36.88pt !important;
+            text-transform: uppercase;
+        }
+        
+        .strP>p:nth-child(3) {
+            font-size: 27.19pt !important;
+        }
+        
+        .strImg>img {
+            width: 100%;
+        }
+        
+        .strBackg .btn {
+            width: 58%;
+            height: 40px;
+            border-radius: 26px;
+            border: none;
+            margin-left: 12%;
+            margin-top: 2%;
+            font-size: 15pt;
+            color: #e2e2e2;
+            background-color: #267467;
+            padding: 0;
+        }
+        
+        .strBackg .strContent {
+            color: #202d52;
+            font-size: 12.38pt;
+            font-weight: bold;
+        }
+        
+        .strContent .arb {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .newImg>img {
+            width: 55%;
+        }
+        
+        .newP {
+            border-right: 11px solid #267467;
+            height: 155px;
+            margin: auto;
+        }
+        
+        .newP>p {
+            font-weight: bold;
+            color: #267467;
+            font-size: 23.23pt;
+            text-align: right;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+        
+        .newP>p:nth-child(2) {
+            font-size: 12.86pt !important;
+        }
+        
+        .newP>p:nth-child(3) {
+            font-size: 27.2pt !important;
+            text-transform: uppercase;
+        }
+        
+        .newP>p:nth-child(4) {
+            font-size: 18.51pt !important;
+        }
+        
+        .newContImg {
+            padding: 0 0 0 16px;
+            margin: 4px 0px 4px 0px;
+        }
+        
+        .newContImg>img {
+            width: 100%;
+        }
+        
+        .newCont .arb {
+            direction: rtl;
+            color: #202d5e;
+            font-size: 12.38pt;
+            font-weight: bold;
+            text-align: right;
+            margin-bottom: 9px;
+        }
+        
+        .newCont .eng {
+            direction: ltr;
+            color: #202d5e;
+            font-size: 12.38pt;
+            font-weight: bold;
+            text-align: left;
+            font-family: sans-serif;
+        }
+        
+        .new .hedArb,
+        .new .hedEng {
+            width: 100%;
+            color: #267467;
+            font-size: 12.38pt;
+            font-weight: bold;
+        }
+        
+        .new .hedArb {
+            margin-right: 14px;
+            text-align: right;
+        }
+        
+        .new .hedEng {
+            text-align: left;
+            margin-left: 14px;
+        }
+        
+        .tstBackg {
+            background-color: #e2e2e2;
+            margin: 0;
+        }
+        
+        .tstP {
+            border-left: 11px solid #267467;
+            height: 120px;
+            margin: auto;
+        }
+        
+        .tstP>p {
+            font-weight: bold;
+            color: #267467;
+            font-size: 24.14pt;
+            text-align: left;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+        
+        .tstP>p:nth-child(2) {
+            font-size: 36.88pt !important;
+            text-transform: uppercase;
+        }
+        
+        .tstP>p:nth-child(3) {
+            font-size: 27.19pt !important;
+        }
+        
+        .tstImg>img {
+            width: 100%;
+            margin: 14px 0px 14px 0;
+        }
+        
+        .tstBackg .tstContent {
+            direction: rtl;
+            color: #202d5e;
+            font-size: 12.38pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 9px;
+        }
+        
+        .infoImg>img {
+            width: 55%;
+        }
+        
+        .infoP {
+            border-right: 11px solid #267467;
+            height: 134px;
+            margin: auto;
+        }
+        
+        .infoP>p {
+            font-weight: bold;
+            color: #267467;
+            font-size: 28.82pt;
+            text-align: right;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+        
+        .infoP>p:nth-child(2) {
+            font-size: 36.44pt !important;
+            text-transform: uppercase;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .infoP>p:nth-child(2) {
+                font-size: 25.44pt !important;
+                text-transform: uppercase;
+            }
+        }
+        
+        .infoP>p:nth-child(3) {
+            font-size: 19.62pt !important;
+        }
+        
+        .infoContImg {
+            padding: 0 0 0 16px;
+            margin: 4px 0px 4px 0px;
+        }
+        
+        .infoContImg>img {
+            width: 100%;
+        }
+        
+        .infoCont {
+            color: #202d5e;
+            font-size: 17.38pt;
+            font-weight: bold;
+            margin-bottom: 9px;
+            text-align: center;
+        }
+        
+        .b {
+            padding-top: 5%;
+        }
+        
+        .b .arb {
+            direction: rtl;
+        }
+        /* Networking */
+        
+        .netBackg {
+            background-color: #e2e2e2;
+            margin: 0;
+        }
+        
+        .netP {
+            border-left: 11px solid #267467;
+            height: 120px;
+            margin-top: 10px;
+        }
+        
+        .netP>p {
+            font-weight: bold;
+            color: #267467;
+            font-size: 24.14pt;
+            text-align: left;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+        
+        .netP>p:nth-child(2) {
+            font-size: 36.88pt !important;
+            text-transform: uppercase;
+        }
+        
+        .netP>p:nth-child(3) {
+            font-size: 27.19pt !important;
+        }
+        
+        .netImg>img {
+            width: 100%;
+            margin: 14px 0px 14px 0;
+        }
+        
+        .netBackg .netContE,
+        .netBackg .netContA {
+            color: #202d5e;
+            font-size: 12.38pt;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 0 0px 0px 55px;
+        }
+        
+        .netBackg .netContE {
+            text-align: left;
+            direction: ltr;
+        }
+        
+        .netBackg .netContA {
+            text-align: right;
+            direction: rtl;
+        }
+        
+        .lunch {
+            background-color: #202d5e;
+            margin: 0;
+        }
+        
+        .lunchP {
+            border-right: 11px solid #e2e2e2;
+            height: 100px;
+            margin-top: 20px;
+        }
+        
+        .lunchP>p {
+            font-weight: bold;
+            color: #e2e2e2;
+            font-size: 24.14pt;
+            text-align: right;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+            text-transform: uppercase;
+        }
+        
+        .lunchCont {
+            margin-top: 20px;
+        }
+        
+        .lunchCont .hedArb,
+        .lunchCont .hedEng {
+            color: #e2e2e2;
+            font-size: 20pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 9px;
+        }
+        
+        .lunchCont .hedArb {
+            direction: rtl;
+        }
+        
+        .lunchCont .hedEng {
+            direction: ltr;
+        }
+        
+        .lunchdate {
+            color: #e2e2e2;
+            font-size: 16pt;
+            font-weight: bold;
+            margin-left: 8%
+        }
+        
+        .lunchdate>p:not(:nth-child(3)) {
+            border-right: 7px solid #e2e2e2;
+            padding-right: 10px;
+        }
+        
+        .lunchdate>p:not(:nth-child(1)) {
+            padding-left: 10px;
+        }
+    </style>
+
     <title>Home</title>
 </head>
 
@@ -17,11 +463,11 @@
     <header class="container-fluid row clearfix">
 
         <div class="col-md-7 col-sm-12 imgCrew">
-            <img src="Photos/crew.png" alt="">
+            <img src="photos/crew.png" alt="">
         </div>
 
         <div class="col-md-5 col-sm-6 logoimg">
-            <img src="Photos/جرعه معرفه.png" alt="">
+            <img src="photos/جرعه معرفه.png" alt="">
         </div>
 
         <div class="col-md-7 col-sm-6 content pFont">
@@ -36,7 +482,7 @@
     <!-- Section -->
     <div class="container-fluid row">
         <div class="col-sm-6 proImg">
-            <img src="Photos/photo.png" alt="">
+            <img src="photos/photo.png" alt="">
         </div>
         <div class="col-sm-6 proP d-flex flex-column">
             <p>أبرز المشاريع</p>
@@ -79,7 +525,7 @@
 
     <div class="container-fluid row new">
         <div class="col-sm-6 newImg">
-            <img src="Photos/welcome to the team.png" alt="">
+            <img src="photos/welcome to the team.png" alt="">
         </div>
         <div class="col-sm-6 newP d-flex flex-column">
             <p>انضم حديثا إلينا</p>
@@ -118,7 +564,7 @@
     <div class="clearfix"></div>
     <div class="container-fluid row">
         <div class="col-sm-6 infoImg">
-            <img src="Photos/معلومات عامه.png" alt="">
+            <img src="photos/معلومات عامه.png" alt="">
         </div>
         <div class="col-sm-6 infoP d-flex flex-column">
             <p>معلومات عامة</p>
